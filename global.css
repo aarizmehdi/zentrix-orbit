@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    /* GSAP-style gradient animation */
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .animated-gradient {
+        background-size: 200% auto;
+        animation: gradient 8s ease infinite;
+    }
+
+    .animated-gradient-delay {
+        background-size: 200% auto;
+        animation: gradient 8s ease infinite;
+        animation-delay: 0.5s;
+    }
+
+    /* Smoke effect animation */
+    @keyframes smoke-rise {
+        0% {
+            transform: translateY(0) translateX(0) scale(1);
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 0.15;
+        }
+
+        50% {
+            opacity: 0.08;
+        }
+
+        100% {
+            transform: translateY(-120vh) translateX(-20vw) scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    .smoke-effect {
+        animation: smoke-rise 25s ease-in-out infinite;
+    }
+
+    .smoke-effect-delay {
+        animation: smoke-rise 30s ease-in-out infinite;
+        animation-delay: 5s;
+    }
+}

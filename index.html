@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/brand/favicon/favicon.png" />
+  <link rel="apple-touch-icon" href="/brand/favicon/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#7c3aed" />
+
+  <title>Zentrix Orbit | Premium React UI Component Library by Aariz Mehdi</title>
+  <meta name="description"
+    content="The definitive headless UI system for scalable, enterprise-grade React applications. 50+ premium components built with Radix UI and Tailwind CSS. Created by Aariz Mehdi." />
+  <meta name="author" content="Aariz Mehdi" />
+  <meta name="creator" content="Aariz Mehdi" />
+  <meta name="keywords"
+    content="React UI library, Design System, Headless Components, Tailwind CSS, Aariz Mehdi, Zentrix Orbit, Enterprise Components, React Components, Accessible UI, Radix UI, TypeScript, shadcn alternative, premium UI kit, developer tools" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zentrix-orbit.com" />
+  <meta property="og:title" content="Zentrix Orbit | Premium React UI Component Library" />
+  <meta property="og:description"
+    content="50+ premium, accessible React components built with Radix UI and Tailwind CSS. Created by Aariz Mehdi for modern web applications." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:site_name" content="Zentrix Orbit" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Zentrix Orbit | Premium React UI Component Library" />
+  <meta name="twitter:description"
+    content="50+ premium, accessible React components. Built by Aariz Mehdi with Radix UI and Tailwind CSS." />
+  <meta name="twitter:image" content="/og-image.png" />
+  <meta name="twitter:creator" content="@AarizMehdi" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Zentrix Orbit",
+    "applicationCategory": "DeveloperApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "Aariz Mehdi"
+    },
+    "description": "Premium React UI component library with 50+ accessible components",
+    "operatingSystem": "Web Browser",
+    "programmingLanguage": ["JavaScript", "TypeScript", "React"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          backgroundImage: {
+            'grid-pattern': "linear-gradient(to right, #202020 1px, transparent 1px), linear-gradient(to bottom, #202020 1px, transparent 1px)",
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")",
+          },
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+            primary: {
+              DEFAULT: "hsl(var(--primary))",
+              foreground: "hsl(var(--primary-foreground))",
+            },
+            secondary: {
+              DEFAULT: "hsl(var(--secondary))",
+              foreground: "hsl(var(--secondary-foreground))",
+            },
+            destructive: {
+              DEFAULT: "hsl(var(--destructive))",
+              foreground: "hsl(var(--destructive-foreground))",
+            },
+            muted: {
+              DEFAULT: "hsl(var(--muted))",
+              foreground: "hsl(var(--muted-foreground))",
+            },
+            accent: {
+              DEFAULT: "hsl(var(--accent))",
+              foreground: "hsl(var(--accent-foreground))",
+            },
+          },
+          keyframes: {
+            "accordion-down": {
+              from: { height: "0" },
+              to: { height: "var(--radix-accordion-content-height)" },
+            },
+            "accordion-up": {
+              from: { height: "var(--radix-accordion-content-height)" },
+              to: { height: "0" },
+            },
+            "slide-in-from-top-2": {
+              "0%": { transform: "translateY(-2px)", opacity: "0" },
+              "100%": { transform: "translateY(0)", opacity: "1" },
+            },
+            "pulse-glow": {
+              "0%, 100%": { opacity: "1", filter: "drop-shadow(0 0 5px rgba(124, 58, 237, 0.5))" },
+              "50%": { opacity: "0.8", filter: "drop-shadow(0 0 15px rgba(124, 58, 237, 0.8))" },
+            }
+          },
+          animation: {
+            "accordion-down": "accordion-down 0.2s ease-out",
+            "accordion-up": "accordion-up 0.2s ease-out",
+            "slide-in": "slide-in-from-top-2 0.2s ease-out",
+            "pulse-glow": "pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --background: 240 5% 3.5%;
+      /* Soft dark zinc-950 */
+      --foreground: 0 0% 98%;
+      /* Soft white */
+      --border: 240 4% 12%;
+      /* Soft border */
+      --input: 240 4% 12%;
+      --ring: 262 83% 58%;
+      /* Premium purple #7c3aed */
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --secondary: 240 3.7% 15.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --accent: 240 3.7% 15.9%;
+      --accent-foreground: 0 0% 98%;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Subtle noise texture overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    /* Premium scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: hsl(240 4% 8%);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: hsl(240 4% 16%);
+      border-radius: 4px;
+      transition: background 0.2s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: hsl(262 83% 58% / 0.3);
+    }
+
+    /* For Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: hsl(240 4% 16%) hsl(240 4% 8%);
+    }
+
+    /* GSAP-style gradient animation */
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1?dev",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime?dev",
+    "react-dom": "https://esm.sh/react-dom@18.3.1?dev",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?dev",
+    "clsx": "https://esm.sh/clsx@2.1.1",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@2.5.4",
+    "@radix-ui/react-slot": "https://esm.sh/@radix-ui/react-slot@1.1.0?external=react,react-dom",
+    "lucide-react": "https://esm.sh/lucide-react@0.454.0?external=react,react-dom",
+    "@radix-ui/react-dialog": "https://esm.sh/@radix-ui/react-dialog@1.1.1?external=react,react-dom",
+    "@radix-ui/react-label": "https://esm.sh/@radix-ui/react-label@2.1.0?external=react,react-dom",
+    "@radix-ui/react-accordion": "https://esm.sh/@radix-ui/react-accordion@1.2.0?external=react,react-dom",
+    "@radix-ui/react-switch": "https://esm.sh/@radix-ui/react-switch@1.1.0?external=react,react-dom",
+    "@radix-ui/react-tabs": "https://esm.sh/@radix-ui/react-tabs@1.1.0?external=react,react-dom",
+    "@radix-ui/react-avatar": "https://esm.sh/@radix-ui/react-avatar@1.1.0?external=react,react-dom",
+    "@radix-ui/react-slider": "https://esm.sh/@radix-ui/react-slider@1.2.0?external=react,react-dom",
+    "@radix-ui/react-checkbox": "https://esm.sh/@radix-ui/react-checkbox@1.1.1?external=react,react-dom",
+    "@radix-ui/react-popover": "https://esm.sh/@radix-ui/react-popover@1.1.1?external=react,react-dom",
+    "@radix-ui/react-select": "https://esm.sh/@radix-ui/react-select@2.1.1?external=react,react-dom",
+    "@radix-ui/react-progress": "https://esm.sh/@radix-ui/react-progress@1.1.0?external=react,react-dom",
+    "@radix-ui/react-dropdown-menu": "https://esm.sh/@radix-ui/react-dropdown-menu@2.1.1?external=react,react-dom",
+    "@radix-ui/react-radio-group": "https://esm.sh/@radix-ui/react-radio-group@1.2.0?external=react,react-dom",
+    "@radix-ui/react-tooltip": "https://esm.sh/@radix-ui/react-tooltip@1.1.2?external=react,react-dom",
+    "@radix-ui/react-separator": "https://esm.sh/@radix-ui/react-separator@1.1.0?external=react,react-dom",
+    "@radix-ui/react-toast": "https://esm.sh/@radix-ui/react-toast@1.2.1?external=react,react-dom",
+    "@radix-ui/react-hover-card": "https://esm.sh/@radix-ui/react-hover-card@1.1.1?external=react,react-dom",
+    "@radix-ui/react-menubar": "https://esm.sh/@radix-ui/react-menubar@1.1.1?external=react,react-dom",
+    "@radix-ui/react-navigation-menu": "https://esm.sh/@radix-ui/react-navigation-menu@1.2.0?external=react,react-dom",
+    "@radix-ui/react-toggle": "https://esm.sh/@radix-ui/react-toggle@1.1.0?external=react,react-dom",
+    "@radix-ui/react-toggle-group": "https://esm.sh/@radix-ui/react-toggle-group@1.1.0?external=react,react-dom",
+    "@radix-ui/react-scroll-area": "https://esm.sh/@radix-ui/react-scroll-area@1.1.0?external=react,react-dom",
+    "@radix-ui/react-collapsible": "https://esm.sh/@radix-ui/react-collapsible@1.1.1?external=react,react-dom",
+    "@radix-ui/react-context-menu": "https://esm.sh/@radix-ui/react-context-menu@2.2.1?external=react,react-dom",
+    "@radix-ui/react-aspect-ratio": "https://esm.sh/@radix-ui/react-aspect-ratio@1.1.0?external=react,react-dom",
+    "cmdk": "https://esm.sh/cmdk@1.0.0?external=react,react-dom",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
