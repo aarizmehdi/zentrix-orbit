@@ -2676,7 +2676,7 @@ const Footer: React.FC = () => {
         </div>
         <p className="text-zinc-500 max-w-lg leading-relaxed text-sm">
           The definitive headless UI system for scalable, enterprise-grade React applications.
-          Created by <span className="text-zinc-300 font-medium">Aariz Mehdi</span>.
+          Built with ❤️ by <span className="text-zinc-300 font-medium">Aariz Mehdi</span>.
         </p>
         <div className="text-xs text-zinc-600 mt-4 font-mono">
           © {new Date().getFullYear()} ZENTRIX ORBIT. ALL RIGHTS RESERVED.
@@ -2693,7 +2693,7 @@ const App: React.FC = () => {
 
   const categories: Category[] = ['Foundation', 'Form Primitives', 'Data Display', 'Feedback', 'Overlay', 'Navigation', 'Charts', 'Patterns'];
 
-  // Scroll to top when route changes
+
   React.useEffect(() => {
     const mainContent = document.querySelector('main');
     if (mainContent) {
@@ -2705,16 +2705,19 @@ const App: React.FC = () => {
     if (activeRoute === 'introduction') {
       return (
         <div className="space-y-16 max-w-5xl mx-auto">
-          <div className="relative space-y-12 py-8 text-center md:text-left">
-            {/* Subtle radial gradient glow */}
+          <div className="relative space-y-12 pt-0 pb-8 text-center md:text-left">
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(124,58,237,0.08)_0%,transparent_60%)] pointer-events-none" />
             <div className="relative space-y-8 animate-in fade-in-0 slide-in-from-bottom-4 duration-300 [animation-timing-function:cubic-bezier(0.16,1,0.3,1)]">
-              <h1 className="font-display text-5xl md:text-7xl font-black tracking-[-0.04em] leading-[1.1] max-w-3xl md:mx-0 mx-auto mb-8">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-100 to-white animated-gradient">
-                  Build faster
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm animate-in fade-in slide-in-from-bottom-2 duration-500">
+                <span className="flex h-2 w-2 rounded-full bg-[#7c3aed] animate-pulse"></span>
+                <span className="text-xs font-medium text-zinc-300 tracking-wide uppercase">Introducing Zentrix Orbit</span>
+              </div>
+              <h1 className="font-display text-5xl md:text-8xl font-black tracking-[-0.04em] leading-[1.1] max-w-4xl md:mx-0 mx-auto mb-8 drop-shadow-2xl">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-indigo-200 animated-gradient pb-2">
+                  Build faster.
                 </span>
-                <span className="block mt-3 text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-white to-purple-300 animated-gradient-delay">
-                  Ship smarter
+                <span className="block -mt-4 text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-fuchsia-300 to-purple-400 animated-gradient-delay relative">
+                  Ship smarter.
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-zinc-300/95 max-w-2xl leading-[1.75] md:mx-0 mx-auto" style={{ letterSpacing: '-0.015em', fontWeight: 450 }}>
@@ -2725,7 +2728,7 @@ const App: React.FC = () => {
               <Button size="lg" variant="neon" onClick={() => setActiveRoute('button')} className="group h-12 px-8 text-base rounded-xl transition-all duration-300 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(124,58,237,0.3)] focus:ring-2 focus:ring-[#7c3aed] focus:ring-offset-2 focus:ring-offset-zinc-950 bg-gradient-to-r from-[#7c3aed] to-[#6d28d9]">
                 Explore Components <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
-              <Button size="lg" variant="outline" onClick={() => window.open('https://github.com', '_blank')} className="group h-12 px-8 text-base rounded-xl transition-all duration-300 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-zinc-950">
+              <Button size="lg" variant="outline" onClick={() => window.open('https://github.com/aarizmehdi/zentrix-orbit', '_blank')} className="group h-12 px-8 text-base rounded-xl transition-all duration-300 [transition-timing-function:cubic-bezier(0.16,1,0.3,1)] hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-zinc-950">
                 <Github className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:rotate-12" /> Star on GitHub
               </Button>
             </div>
@@ -2734,7 +2737,7 @@ const App: React.FC = () => {
           <Separator className="my-16" />
           <div className="space-y-12 animate-in fade-in-0 slide-in-from-bottom-4 duration-300 [animation-delay:150ms] [animation-timing-function:cubic-bezier(0.16,1,0.3,1)]">
             <div className="flex items-center justify-between">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight text-white">Quick Start Guide</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight text-white">💡Quick Start Guide</h2>
               <div className="px-4 py-1.5 rounded-full bg-[#7c3aed]/10 text-[#7c3aed] text-xs font-semibold border border-[#7c3aed]/20 shadow-[0_0_20px_rgba(124,58,237,0.15)]">
                 v2.0.0
               </div>
@@ -2844,8 +2847,8 @@ const App: React.FC = () => {
               <Menu />
             </Button>
             <div className="hidden md:flex items-center gap-3">
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors">
-                <Github size={20} />
+              <a href="https://github.com/aarizmehdi/zentrix-orbit" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-white transition-colors group">
+                <Github size={20} className="group-hover:text-[#7c3aed] transition-colors duration-300 animate-float" />
               </a>
               <div className="h-4 w-[1px] bg-white/10"></div>
               <a href="#" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">v2.0</a>
@@ -2910,7 +2913,7 @@ const App: React.FC = () => {
         </aside>
 
         <main className="flex-1 min-w-0 overflow-y-auto relative scroll-smooth bg-zinc-950">
-          <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-16 min-h-screen">
+          <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-4 pb-16 min-h-screen">
             {renderContent()}
           </div>
           <Footer />

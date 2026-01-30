@@ -2,6 +2,11 @@
   "name": "zentrix-orbit",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://zentrix-orbit.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aarizmehdi/zentrix-orbit"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -39,8 +44,8 @@
     "clsx": "2.1.1",
     "cmdk": "1.0.0",
     "lucide-react": "0.454.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "tailwind-merge": "2.5.4"
   },
   "devDependencies": {
@@ -52,7 +57,4 @@
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
-
-
 }
-
