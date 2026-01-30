@@ -1,6 +1,7 @@
 {
   "name": "zentrix-orbit",
   "private": true,
+  "license": "UNLICENSED",
   "version": "0.0.0",
   "homepage": "https://zentrix-orbit.vercel.app/",
   "repository": {
